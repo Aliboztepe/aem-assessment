@@ -1,20 +1,30 @@
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: var(--background-color);
 }
 
 footer .footer > div {
   margin: auto;
   max-width: 1200px;
-  padding: 40px 24px 24px;
+  padding: 45px 24px 24px;
 }
 
 footer .footer p {
   margin: 0;
+  font-family: 'FS Albert';
+  font-weight: normal;
+  font-size: 16px;
+  color: var(--darker-gray-color);
+}
+
+footer .section {
+  display: flex;
+  align-items: center;
 }
 
 @media (width >= 900px) {
   footer .footer > div {
-    padding: 40px 32px 24px;
+    padding: 45px 0 26px;
+    display: flex;
+    justify-content: space-between;
   }
 }

@@ -163,4 +163,30 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  setNavigateScroll();
 }
+
+export const setNavigateScroll = () => {
+    const navItems = document.querySelectorAll('.nav-sections ul li');
+    const eventsContainer = document.querySelector('.events-container');
+    const heroBannerContainer = document.querySelector('.hero-banner-container');
+
+    if (!eventsContainer && !heroBannerContainer) return;
+
+    navItems.forEach((item) => {
+        if (item.textContent.trim().toUpperCase() === 'UPCOMING EVENTS') {
+            item.addEventListener('click', (event) => {
+                event.preventDefault();
+                eventsContainer.scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+
+        if (item.textContent.trim().toUpperCase() === 'HOME') {
+            item.addEventListener('click', (event) => {
+                event.preventDefault();
+                heroBannerContainer.scrollIntoView({ behavior: 'smooth' });
+            });
+      }
+    });
+};

@@ -1,0 +1,275 @@
+.events-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1050px !important;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.events-container {
+    height: 665px;
+    padding-top: 78px !important;
+    background-color: var(--light-background-color);
+    margin: 0 !important;
+}
+
+.events-container .default-content-wrapper p {
+    font-family: 'FS Albert';
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 43px;
+    color: var(--navy-blue-color);
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+.events {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 44px;
+}
+
+.event {
+    box-sizing: border-box;
+    flex: 0 0 300px;
+    width: 300px;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'FS Albert';
+}
+
+.event-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 67px;
+    background-color: var(--dark-blue-color);
+    color: var(--white-color);
+    font-size: 20px;
+    line-height: 43;
+    font-weight: normal;
+    border-radius: 10px 10px 0 0;
+    margin: 0;
+}
+
+.event-description {
+    position: relative;
+    font-size: 19px;
+    font-weight: normal;
+    line-height: 24px;
+    color: var(--navy-blue-color);
+    margin: 25px 15px 19px;
+    min-height: 95px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    padding-bottom: 10px;
+}
+
+.event-description::after {
+    content: '';
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: var(--gray-color);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    opacity: 0.3;
+}
+
+.event-speaker-name {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--light-blue-color);
+    margin: 0 0 31px;
+}
+
+.button {
+    padding: 11px 3px;
+    border: none;
+    border-radius: 29px;
+    font-size: 13px;
+    cursor: pointer;
+    margin: 0 0 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 20px var(--semi-transparent-blue-color);
+}
+
+.button.register {
+    background-color: var(--light-blue-color);
+    color: var(--white-color);
+    width: 101px;
+    margin-right: 10px;
+}
+
+.button.add-to-calendar {
+    background-color: var(--navy-blue-color);
+    color: var(--white-color);
+    width: 145px;
+}
+
+.button.more-details {
+    border: 1px solid var(--primary-blue-color);
+    background-color: var(--white-color);
+    color: var(--primary-blue-color);
+    width: 266px;
+}
+
+.slider-button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--dark-blue-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.slider-button:hover {
+    background-color: var(--navy-blue-color);
+}
+
+.slider-button.prev {
+    left: 10px;
+}
+
+.slider-button.next {
+    right: 10px;
+}
+
+@media (max-width: 991px) {
+    .events-container {
+        height: 500px;
+        padding-top: 40px !important;
+    }
+
+    .events-container .default-content-wrapper p {
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+
+    .events {
+        gap: 32px;
+    } 
+
+    .event {
+        flex: 0 0 260px;
+        width: 260px;
+    }
+
+    .event-date {
+        width: 260px;
+        height: 60px;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .event-description {
+        font-size: 16px;
+        line-height: 22px;
+        min-height: 80px;
+        margin: 20px 15px 16px;
+    }
+
+    .event-speaker-name {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+
+    .button {
+        font-size: 12px;
+        margin-bottom: 24px;
+    }
+
+    .button.more-details {
+        width: 220px;
+    }
+
+    .slider-button {
+        padding: 0;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .events-container {
+        height: 400px;
+        padding-top: 20px !important;
+    }
+
+    .events-container .default-content-wrapper p {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+
+    .events {
+        gap: 24px;
+    }
+
+    .event {
+        flex: 0 0 260px;
+        width: 260px;
+    }
+
+    .event-date {
+        width: 260px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .event-description {
+        font-size: 14px;
+        line-height: 20px;
+        min-height: 80px;
+        margin: 16px;
+    }
+
+    .event-speaker-name {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    .button {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .button.register {
+        width: 90px;
+    }
+
+    .button.add-to-calendar {
+        width: 120px;
+    }
+
+    .button.more-details {
+        width: 200px;
+    }
+
+    .slider-button {
+        padding: 0;
+        width: 30px;
+        height: 30px;
+    }
+}

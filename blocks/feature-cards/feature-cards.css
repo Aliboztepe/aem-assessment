@@ -1,0 +1,122 @@
+.feature-cards-container {
+    padding: 124px 0 184px;
+} 
+
+.feature-cards {
+    display: flex;
+    gap: 23px;
+    position: relative;
+}
+
+.cards-icon {
+    height: 58px;
+    max-width: 64px;
+}
+
+.feature-card-list {
+    position: relative;
+    display: flex;
+    gap: 23px;
+}
+
+.feature-card-list::after {
+    content: '';
+    position: absolute;
+    top: -16px;
+    left: 60px;
+    display: block;
+    width: 74px;
+    height: 74px;
+    background-color: var(--soft-blue-color);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.cards-content {
+    font-family: 'FS Albert';
+    z-index: 2;
+}
+
+.cards-title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 43px;
+    color: var(--dark-blue-color);
+}
+
+.cards-description {
+    margin: 0;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--dark-gray-color);
+}
+
+@media (max-width: 991px) {
+    .feature-cards-container {
+        padding: 80px 0 120px;
+    }
+
+    .feature-cards {
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .cards-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .cards-description {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .cards-icon {
+        height: 50px;
+        max-width: 50px;
+    }
+
+    .feature-cards::after {
+        width: 50px;
+        height: 50px;
+        top: -25px;
+        left: 45px;
+    }
+}
+
+@media (max-width: 767px) {
+    .feature-cards-container {
+        padding: 40px 0 80px;
+    }
+
+    .feature-cards {
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .cards-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .cards-description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .cards-icon {
+        height: 40px;
+        max-width: 40px;
+    }
+
+    .feature-cards::after {
+        width: 40px;
+        height: 40px;
+        top: -25px;
+        left: 45px;
+    }
+}
