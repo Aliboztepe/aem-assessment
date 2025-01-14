@@ -88,6 +88,12 @@
     font-size: 15px;
     line-height: 18px;
     color: var(--darker-gray-color);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
 }
 
 .see-bio-button {
