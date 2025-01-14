@@ -12,12 +12,32 @@
 
 :root {
   /* colors */
-  --background-color: white;
+  --background-color: #FFFFFF;
   --light-color: #f8f8f8;
   --dark-color: #505050;
   --text-color: #131313;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
+
+  /* project color list */
+  --white-color: #FFFFFF;
+  --light-background-color: #F7F8FB;
+  --light-overlay-color: #1490DF24;
+  --dark-blue-color: #232B76;
+  --navy-blue-color: #042164;
+  --semi-transparent-blue-color: #1490DF60;
+  --light-blue-color: #009FE3;
+  --primary-blue-color: #1490DF;
+  --gray-color: #707070;
+  --transparent-light-blue-color: #009FE345;
+  --transparent-background-color: #F5F5F500;
+  --light-gray-color: #F5F5F5;
+  --soft-blue-color: #E2F3FC;
+  --dark-gray-color: #666666;
+  --darker-gray-color: #333333;
+  --shadow-color: #00000029;
+  --overlay-color: #00000080;
+  --lighter-blue-color: #E4F3FC;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
@@ -37,7 +57,7 @@
   --heading-font-size-xs: 22px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 100px;
 }
 
 /* fallback fonts */
@@ -187,14 +207,6 @@ button {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-a.button:hover,
-a.button:focus,
-button:hover,
-button:focus {
-  background-color: var(--link-hover-color);
-  cursor: pointer;
 }
 
 button:disabled,

@@ -2,7 +2,7 @@
 header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
-  z-index: 2;
+  z-index: 10;
   position: fixed;
 }
 
@@ -34,9 +34,9 @@ header nav[aria-expanded='true'] {
   header nav {
     display: flex;
     justify-content: space-between;
-    gap: 0 32px;
+    gap: 0 110px;
     max-width: 1264px;
-    padding: 0 32px;
+    padding: 0;
   }
 
   header nav[aria-expanded='true'] {
@@ -171,6 +171,11 @@ header nav .nav-sections ul {
 
 header nav .nav-sections ul > li {
   font-weight: 500;
+  font-family: 'FS Albert';
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--dark-blue-color);
+  cursor: pointer;
 }
 
 header nav .nav-sections ul > li > ul {
@@ -220,7 +225,7 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 24px;
+    gap: 39px;
     margin: 0;
   }
 
